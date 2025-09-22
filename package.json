@@ -1,0 +1,34 @@
+{
+  "name": "unifi-stock-tracker-web",
+  "version": "1.0.0",
+  "description": "Web application for tracking Ubiquiti UniFi product stock",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "nodemon server/index.js",
+    "client:dev": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js",
+    "install:all": "npm install && cd client && npm install"
+  },
+  "keywords": ["ubiquiti", "unifi", "stock", "tracker", "monitoring"],
+  "author": "Stock Tracker Web",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.5.0",
+    "socket.io": "^4.7.2",
+    "node-cron": "^3.0.2",
+    "sqlite3": "^5.1.6",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
